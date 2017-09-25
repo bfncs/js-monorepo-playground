@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nano from '../../../packages/nano/index';
+import Nano from 'nano';
 
 class App extends Component {
   render() {
