@@ -1,0 +1,1 @@
+export default str => 'femto: ' + str;

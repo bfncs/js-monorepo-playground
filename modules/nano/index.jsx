@@ -1,13 +1,12 @@
 import React from 'react';
-import Yokto from '../yokto';
-
+import Yokto from '../yokto/index';
 
 const Nano = ({ children }) => (
   <div>
     Nano:
-    <Nano>
+    <Yokto>
       { children }
-    </Nano>
+    </Yokto>
   </div>
 );
 
