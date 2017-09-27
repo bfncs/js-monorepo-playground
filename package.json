@@ -13,8 +13,12 @@
     "regenerator-runtime": "^0.11.0"
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "env": {
+      "test": {
+        "presets": [
+          "react-app"
+        ]
+      }
+    }
   }
 }
