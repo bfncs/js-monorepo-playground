@@ -1,8 +1,5 @@
 const path = require('path');
 
-const sharedModules = path.resolve(__dirname, '../../modules');
-console.log({ sharedModules });
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -12,14 +9,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
-      sharedModules,
-      path.resolve(__dirname, 'node_modules'),
-      'node_modules',
-    ]
-  },
-  resolveLoader: {
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
+      path.resolve(__dirname, '../../modules'),
       'node_modules',
     ]
   },
