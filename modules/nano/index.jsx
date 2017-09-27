@@ -1,5 +1,6 @@
 import React from 'react';
-import Yokto from '../yokto/index';
+import propTypes from 'prop-types';
+import Yokto from 'yokto';
 
 const Nano = ({ children }) => (
   <div>

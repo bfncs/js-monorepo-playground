@@ -143,7 +143,7 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
-            //include: [paths.appSrc, paths.sharedSrc],
+            include: [paths.appSrc, paths.sharedSrc],
             exclude: /(node_modules|bower_components)/,
             loader: require.resolve('babel-loader'),
             options: {
@@ -152,6 +152,7 @@ module.exports = {
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
               //cacheDirectory: true,
+              presets: [require.resolve('babel-preset-react-app')],
             },
           },
           // "postcss" loader applies autoprefixer to our CSS.
