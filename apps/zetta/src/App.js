@@ -1,33 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapProps, withReducer, compose } from 'recompose';
 import List from './List';
 import Input from 'react/input';
-import { createItem, setItemDone} from './util/items';
+import { createItem } from './util/items';
+import { reducer as itemsReducer, addNewItem, setStateItemDone } from './state/items';
 
-class App extends Component {
-  state = {
-    items: ['foo', 'bar', 'baz'].map(title => createItem(title)),
-  };
+const INITIAL_ITEMS = ['foo', 'bar', 'baz'].map(title => createItem(title));
 
-  updateItems = items => {
-    console.log(items);
-    this.setState({ items });
-  };
+const App = ({
+  items,
+  addNewItem,
+  setStateItemDone,
+}) => (
+  <div className="wrapper">
+    <Input onEnter={addNewItem}/>
+    <List items={items} setItemDone={setStateItemDone}/>
+  </div>
+);
 
-  setStateItemDone = (id, done) =>
-    this.updateItems(setItemDone(this.state.items, id, done));
+App.propTypes = {
+  items: PropTypes.array.isRequired,
+  addNewItem: PropTypes.func.isRequired,
+  setStateItemDone: PropTypes.func.isRequired,
+};
 
-  addNewItem = title =>
-    this.updateItems([...this.state.items, createItem(title)]);
+const enhance = compose(
+  withReducer('items', 'dispatch', itemsReducer, INITIAL_ITEMS),
+  mapProps(({ dispatch, ...props }) => ({
+      ...props,
+      setStateItemDone: compose(dispatch, setStateItemDone),
+      addNewItem: compose(dispatch, addNewItem, createItem),
+  }))
+);
 
-  render() {
-    const { state: { items = [] } = {} } = this;
-    return (
-      <div className="wrapper">
-        <Input onEnter={this.addNewItem} />
-        <List items={items} setItemDone={this.setStateItemDone} />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default enhance(App);

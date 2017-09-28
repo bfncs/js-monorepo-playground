@@ -9,5 +9,5 @@ export const createItem = (title, done = false) => ({
 const getAndUpdateItem = (items = [], id, fn) =>
   items.map(item => item.id === id ? fn(item) : item);
 
-export const setItemDone = (items = [], id, done) =>
+export const withItemDone = (items = [], id, done) =>
   getAndUpdateItem(items, id, item => ({ ...item, done }));
