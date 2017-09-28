@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Input from './Input';
+import Input from './index';
 
 const NO_OP = () => {};
 
-describe('Input snapshot tests', () => {
+describe('react-input snapshot tests', () => {
 
   it('matches snapshot when done', () => {
     expect(renderer.create(
