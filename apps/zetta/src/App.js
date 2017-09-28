@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
-import Input from 'react-input';
+import Input from 'react/input';
 import { createItem, setItemDone} from './util/items';
 
 class App extends Component {

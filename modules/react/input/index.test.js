@@ -4,7 +4,7 @@ import Input from './index';
 
 const NO_OP = () => {};
 
-describe('react-input snapshot tests', () => {
+describe('react.input snapshot tests', () => {
 
   it('matches snapshot when done', () => {
     expect(renderer.create(
