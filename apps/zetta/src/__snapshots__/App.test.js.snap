@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <h2>
+      Welcome to React
+    </h2>
+  </div>
+  <div>
+    Nano:
+    <div>
+      Yokto: 
+      This is content!
+    </div>
+  </div>
+</div>
+`;

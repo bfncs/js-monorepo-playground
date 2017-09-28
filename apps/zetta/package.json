@@ -33,6 +33,7 @@
     "react": "^15.6.1",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^15.6.1",
+    "react-test-renderer": "15.6.1",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
@@ -41,7 +42,6 @@
     "webpack-manifest-plugin": "1.2.1",
     "whatwg-fetch": "2.0.3"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -78,6 +78,9 @@
       "web.jsx",
       "jsx",
       "node"
+    ],
+    "modulePaths": [
+      "../../modules"
     ]
   },
   "babel": {
