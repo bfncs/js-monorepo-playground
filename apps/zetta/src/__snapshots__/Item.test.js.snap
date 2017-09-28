@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item snapshot tests matches snapshot when done 1`] = `
+<div>
+  <input
+    checked={true}
+    onClick={[Function]}
+    type="checkbox"
+  />
+  <span>
+    title
+  </span>
+</div>
+`;
+
+exports[`Item snapshot tests matches snapshot when not done 1`] = `
+<div>
+  <input
+    checked={false}
+    onClick={[Function]}
+    type="checkbox"
+  />
+  <span>
+    title
+  </span>
+</div>
+`;

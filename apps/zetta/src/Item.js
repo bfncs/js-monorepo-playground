@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Item = ({ title, done, setDone }) => (
   <div>
-    <input type="checkbox" onClick={() => setDone(!done)} />
+    <input type="checkbox" checked={done} onClick={() => setDone(!done)} />
     <span>{ title }</span>
   </div>
 );

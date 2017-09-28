@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input snapshot tests matches snapshot when done 1`] = `
+<input
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  type="text"
+  value=""
+/>
+`;

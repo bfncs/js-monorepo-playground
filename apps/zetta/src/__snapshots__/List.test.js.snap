@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List snapshot tests matches snapshot when empty 1`] = `
+<ul
+  className="list"
+/>
+`;
+
+exports[`List snapshot tests matches snapshot with items 1`] = `
+<ul
+  className="list"
+>
+  <li>
+    <div>
+      <input
+        checked={true}
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span>
+        foo
+      </span>
+    </div>
+  </li>
+  <li>
+    <div>
+      <input
+        checked={false}
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span>
+        bar
+      </span>
+    </div>
+  </li>
+  <li>
+    <div>
+      <input
+        checked={true}
+        onClick={[Function]}
+        type="checkbox"
+      />
+      <span>
+        baz
+      </span>
+    </div>
+  </li>
+</ul>
+`;
