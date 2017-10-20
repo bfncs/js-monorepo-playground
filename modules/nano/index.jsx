@@ -5,7 +5,7 @@ import Yokto from 'yokto';
 const Nano = ({ children }) => (
   <div>
     Nano:
-    <Yokto>
+    <Yokto id={"YoktoId"}>
       { children }
     </Yokto>
   </div>

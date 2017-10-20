@@ -1,0 +1,7 @@
+{
+  "name": "yokto",
+  "private": true,
+  "peerDependencies": {
+    "shortid": "^2.2.8"
+  }
+}

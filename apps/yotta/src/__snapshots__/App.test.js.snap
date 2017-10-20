@@ -7,6 +7,9 @@ exports[`renders correctly 1`] = `
     <div>
       Yokto: 
       This is content!
+      <br />
+      id: 
+      YoktoId
     </div>
   </div>
 </div>
