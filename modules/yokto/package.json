@@ -1,5 +1,6 @@
 {
   "name": "yokto",
+  "version": "snapshot",
   "private": true,
   "peerDependencies": {
     "shortid": "^2.2.8"
